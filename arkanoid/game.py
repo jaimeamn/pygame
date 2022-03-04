@@ -1,12 +1,15 @@
-import pygame as pg
 from arkanoid.escenes import Partida, GameOver
+from pygame import init, display
 
-pg.init()
+init()
 
 class Game:
     def __init__(self, ancho=600, alto=800):
-        pantalla = pg.display.set_mode((ancho, alto))
-        self.escenas = [Partida(pantalla), GameOver(pantalla)]
+        pantalla = display.set_mode((ancho, alto))
+        partida = Partida(pantalla)
+        game_over = GameOver(pantalla)
+
+        self.escenas = [partida, game_over]
 
     def lanzar(self):
         escena_activa = 0

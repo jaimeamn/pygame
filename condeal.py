@@ -154,10 +154,8 @@ class Game:
                 if evento.type == pg.KEYDOWN:
                     if evento.key == pg.K_LEFT:
                         self.raqueta.vx = -5
-
                     if evento.key == pg.K_RIGHT:
                         self.raqueta.vx = 5
-
                 if evento.type == pg.KEYUP:
                     if evento.key in (pg.K_LEFT, pg.K_RIGHT):
                         self.raqueta.vx = 0
@@ -181,7 +179,6 @@ class Game:
                 if ladrillo.vivo:
                     ladrillo.comprobarToque(self.bola)
                     ladrillo.dibujar()
-
             for indice, ladrillo in enumerate(self.ladrillos):
                 ha_chocado = ladrillo.comprobarToque(self.bola)
                 if ha_chocado:

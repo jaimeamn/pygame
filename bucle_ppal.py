@@ -2,7 +2,7 @@ import pygame as pg
 
 pg.init()
 
-pantalla = pg.display.set_mode((600, 800))
+pantalla = pg.display.set_mode((400, 500))
 
 game_over = False
 
